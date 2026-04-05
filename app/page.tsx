@@ -3,23 +3,17 @@ import Image from "next/image";
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-32 sm:h-52">
-        <div className="flex items-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-28 sm:h-36 lg:h-44">
+        <div className="flex items-center">
           <Image
             src="/images/logo-optimized.png"
-            alt="Bee-Rich Consulting"
+            alt="Bee-Rich Consulting — Bee-Rich in Knowledge, Health, Freedom & Fortune"
             width={3000}
             height={2000}
-            className="h-28 sm:h-44 w-auto"
+            className="h-24 sm:h-32 lg:h-40 w-auto"
             priority
+            unoptimized
           />
-          <div className="hidden sm:block border-l-2 border-gold/30 pl-5">
-            <p className="text-navy font-semibold text-base lg:text-lg tracking-wide leading-snug">
-              Bee-Rich in Knowledge, Health,
-              <br />
-              Freedom &amp; Fortune
-            </p>
-          </div>
         </div>
         <a
           href="#book"
@@ -34,7 +28,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="relative pt-40 sm:pt-60 pb-20 sm:pb-28 overflow-hidden">
+    <section className="relative pt-36 sm:pt-48 lg:pt-56 pb-20 sm:pb-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-2 border-gold/20 opacity-40" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-gold/10 opacity-30" />
@@ -621,7 +615,8 @@ function Footer() {
             alt="Bee-Rich Consulting"
             width={3000}
             height={2000}
-            className="h-16 w-auto brightness-200"
+            className="h-20 w-auto brightness-200"
+            unoptimized
           />
 
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-white/50 text-sm">
