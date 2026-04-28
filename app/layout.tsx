@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Bee-Rich Consulting | Knowledge, Health, Freedom & Fortune",
   description:
-    "Bee-Rich Consulting helps you build a life rich in knowledge, health, freedom, and fortune. Book your free consultation today.",
+    "Specialized consulting for childcare founders and early-education entrepreneurs. Proven frameworks for licensing, enrollment, and sustainable growth. Schedule your strategy session today.",
   openGraph: {
     title: "Bee-Rich Consulting",
     description:

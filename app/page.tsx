@@ -34,23 +34,23 @@ function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-gold/10 opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/15">
-          <span className="text-gold-light text-sm">&#9733;</span>
-          <span className="text-white/80 text-sm tracking-wide">
+        <div className="inline-flex items-center gap-2 bg-gold/15 backdrop-blur-sm rounded-full px-5 py-2 mb-8 border border-gold/30">
+          <span className="text-gold-light text-base">&#9733;</span>
+          <span className="text-white text-sm sm:text-base font-semibold tracking-wide">
             Bee-Rich in Knowledge, Health, Freedom &amp; Fortune
           </span>
-          <span className="text-gold-light text-sm">&#9733;</span>
+          <span className="text-gold-light text-base">&#9733;</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto">
-          Transform Your Life Into One
-          <span className="text-gold-light"> Worth Living</span>
+          Build the Early-Education Business
+          <span className="text-gold-light"> You&apos;ve Always Wanted</span>
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-          We partner with driven individuals and businesses to unlock their full
-          potential — building strategies for lasting wealth, wellness, and
-          freedom.
+          Specialized consulting for childcare founders and early-education
+          entrepreneurs. Proven frameworks for licensing, enrollment, and
+          sustainable growth — adaptable for other ambitious businesses too.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,7 +58,7 @@ function Hero() {
             href="#book"
             className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Book Your Free Consultation
+            Book a Strategy Session
             <svg
               className="ml-2 w-5 h-5"
               fill="none"
@@ -113,7 +113,7 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    text: "Feeling stuck in your career or business with no clear path forward",
+    text: "Stuck on childcare licensing, compliance, or DCF requirements with no clear path",
   },
   {
     icon: (
@@ -121,7 +121,7 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    text: "Struggling to build real wealth and financial independence",
+    text: "Struggling to keep enrollment full while running operations alone",
   },
   {
     icon: (
@@ -129,7 +129,7 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
-    text: "Sacrificing your health and relationships for work that doesn\u2019t fulfill you",
+    text: "Sacrificing health and family time chasing the dream of ownership",
   },
   {
     icon: (
@@ -137,7 +137,7 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
       </svg>
     ),
-    text: "Wanting more freedom but unsure how to break free from the daily grind",
+    text: "Ready to scale beyond one location, but unsure where to start",
   },
 ];
 
@@ -266,7 +266,7 @@ const steps = [
     number: "01",
     title: "Discovery Call",
     description:
-      "We start with a free, no-pressure conversation to understand your goals, challenges, and what success looks like for you.",
+      "We start with a focused strategy session to understand your goals, challenges, and what success looks like for you.",
   },
   {
     number: "02",
@@ -432,17 +432,17 @@ function AboutSection() {
               Meet Bee-Rich Consulting
             </h2>
             <p className="mt-6 text-navy/70 leading-relaxed">
-              At Bee-Rich Consulting, we believe that true richness goes beyond
-              your bank account. Founded on the principle that everyone deserves
-              a life filled with knowledge, health, freedom, and fortune, we
-              provide holistic consulting that addresses every facet of your
-              success.
+              At Bee-Rich Consulting, true richness goes beyond your bank
+              account. Built on over two decades of hands-on experience opening
+              and scaling early-education businesses — through licensing
+              hurdles, enrollment battles, and multi-site expansion — we provide
+              consulting grounded in real-world operational expertise, not
+              theory.
             </p>
             <p className="mt-4 text-navy/70 leading-relaxed">
-              Our team brings decades of combined experience in business
-              strategy, personal development, wellness coaching, and financial
-              planning. We don&apos;t believe in one-size-fits-all solutions —
-              every client gets a customized path forward.
+              We don&apos;t believe in one-size-fits-all solutions. Every client
+              gets a customized roadmap drawn from real lessons learned in the
+              trenches of childcare ownership and business growth.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
@@ -469,17 +469,17 @@ const faqs = [
   {
     question: "Who is Bee-Rich Consulting for?",
     answer:
-      "We work with individuals and businesses who want more from life — whether that\u2019s growing a business, improving their health, building wealth, or gaining more personal freedom. If you\u2019re ready for change, we\u2019re ready to help.",
+      "We specialize in working with childcare owners and early-education founders — at any stage, from pre-licensing to multi-site expansion. We also work with entrepreneurs in adjacent industries who value operational and growth strategy grounded in real ownership experience.",
   },
   {
     question: "How much does a consultation cost?",
     answer:
-      "Your initial discovery call is completely free, with no obligation. We\u2019ll discuss your goals and determine if we\u2019re a good fit before any commitment.",
+      "Strategy sessions are paid engagements. Pricing depends on the scope of work \u2014 after you book, we\u2019ll align on goals and confirm investment before any deeper work begins.",
   },
   {
     question: "What makes Bee-Rich different from other consultants?",
     answer:
-      "Our holistic four-pillar approach (Knowledge, Health, Freedom, Fortune) means we don\u2019t just focus on one area of your life. We help you build success across all dimensions, because they\u2019re all connected.",
+      "We\u2019ve actually done the work. Our consulting comes from running and scaling early-education businesses \u2014 not from generalist business-school frameworks. The four-pillar approach (Knowledge, Health, Freedom, Fortune) covers every dimension that matters for sustainable success.",
   },
   {
     question: "How long before I see results?",
@@ -489,7 +489,7 @@ const faqs = [
   {
     question: "Do you work with businesses or individuals?",
     answer:
-      "Both! Whether you\u2019re an entrepreneur looking to scale, a professional seeking career growth, or someone wanting to redesign your lifestyle — we tailor our approach to you.",
+      "Both — but our deepest expertise is in early-education. Whether you\u2019re opening your first center, scaling beyond one location, or building a related business that values our holistic approach, we tailor the engagement to you.",
   },
 ];
 
@@ -553,11 +553,14 @@ function CTASection() {
         </h2>
         <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
           Take the first step toward a life rich in knowledge, health, freedom,
-          and fortune. Your free consultation is just a click away.
+          and fortune. A focused strategy session will get you a clear next
+          move.
         </p>
 
         <div className="mt-10">
-          {/* Calendly embed placeholder — replace href and optionally use inline widget */}
+          {/* TODO (Tony): Replace href below with paid Calendly event-type URL.
+              In Calendly admin → Event Type → Payments → enable Stripe/PayPal.
+              Per Trisha 2026-04-20: "no one talks to me unless they make a payment." */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/15 p-12 max-w-lg mx-auto">
             <div className="text-white/50 mb-6">
               <svg
@@ -575,10 +578,10 @@ function CTASection() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-white">
-              Schedule Your Free Call
+              Schedule a Strategy Session
             </h3>
             <p className="mt-2 text-white/50 text-sm">
-              30-minute strategy session — no obligation
+              Focused, paid, actionable — book a time that works for you
             </p>
             <a
               href="https://calendly.com"
@@ -586,7 +589,7 @@ function CTASection() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full"
             >
-              Book Now — It&apos;s Free
+              Book Now
             </a>
           </div>
         </div>
