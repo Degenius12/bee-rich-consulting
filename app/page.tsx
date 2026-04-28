@@ -3,14 +3,14 @@ import Image from "next/image";
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-28 sm:h-36 lg:h-44">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-32 sm:h-44 lg:h-56">
         <div className="flex items-center">
           <Image
             src="/images/logo-optimized.png"
             alt="Bee-Rich Consulting — Bee-Rich in Knowledge, Health, Freedom & Fortune"
             width={3000}
             height={2000}
-            className="h-24 sm:h-32 lg:h-40 w-auto"
+            className="h-28 sm:h-40 lg:h-52 w-auto"
             priority
             unoptimized
           />
@@ -28,7 +28,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="relative pt-36 sm:pt-48 lg:pt-56 pb-20 sm:pb-28 overflow-hidden">
+    <section className="relative pt-40 sm:pt-56 lg:pt-72 pb-20 sm:pb-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-2 border-gold/20 opacity-40" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-gold/10 opacity-30" />
@@ -55,10 +55,10 @@ function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#book"
+            href="#pricing"
             className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Book a Strategy Session
+            See Packages &amp; Book
             <svg
               className="ml-2 w-5 h-5"
               fill="none"
@@ -281,6 +281,197 @@ const steps = [
       "With ongoing guidance and accountability, we walk with you through every step of your transformation.",
   },
 ];
+
+const pricingTiers = [
+  {
+    name: "Business Strategy Session",
+    price: "$297",
+    cadence: "one-time",
+    tagline:
+      "Get unstuck on a specific decision — licensing, pricing, hiring, or a hard conversation.",
+    bestFor: "Founders facing a single, defined decision",
+    features: [
+      "60-minute focused 1:1 call",
+      "Pre-call questionnaire so we hit the ground running",
+      "Written follow-up with concrete action items",
+      "One follow-up Q&A email within 30 days",
+    ],
+    cta: "Book Strategy Session",
+    href: "#book-strategy",
+    featured: false,
+  },
+  {
+    name: "Launch Roadmap",
+    price: "$1,497",
+    cadence: "4-week engagement",
+    tagline:
+      "Custom plan to open or relaunch your early-education business — operations, finance, and licensing handled.",
+    bestFor: "Pre-launch or relaunching founders",
+    features: [
+      "4 sessions over 4 weeks",
+      "Custom operational and financial roadmap",
+      "Early-education licensing & compliance checklist",
+      "Email support throughout the engagement",
+      "Recorded sessions for replay",
+    ],
+    cta: "Book Launch Roadmap",
+    href: "#book-roadmap",
+    featured: true,
+  },
+  {
+    name: "Growth Partnership",
+    price: "$4,997",
+    cadence: "8-12 week engagement",
+    tagline:
+      "Strategic partner for scaling beyond one location — operations, hiring, finance, expansion.",
+    bestFor: "Established owners ready to expand",
+    features: [
+      "8 sessions over 8-12 weeks",
+      "Full strategic engagement: ops, hiring, finance, expansion",
+      "Monthly review + plan adjustment",
+      "Direct email access throughout the engagement",
+      "Two quarterly check-ins after engagement ends",
+    ],
+    cta: "Book Growth Partnership",
+    href: "#book-growth",
+    featured: false,
+  },
+];
+
+function PricingSection() {
+  return (
+    <section id="pricing" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            Pricing
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
+            Pick the Engagement That Fits Where You Are
+          </h2>
+          <p className="mt-4 text-lg text-navy/60">
+            Every package is paid up front and includes a clear scope. Book the
+            one that fits — no sales call required.
+          </p>
+        </div>
+
+        <div className="mt-14 grid lg:grid-cols-3 gap-8 items-stretch">
+          {pricingTiers.map((tier) => (
+            <div
+              key={tier.name}
+              className={`relative rounded-2xl p-8 border transition-all flex flex-col ${
+                tier.featured
+                  ? "bg-navy border-gold shadow-2xl lg:scale-105"
+                  : "bg-white border-surface hover:border-gold/30 shadow-sm hover:shadow-lg"
+              }`}
+            >
+              {tier.featured && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full whitespace-nowrap">
+                  Most Popular
+                </span>
+              )}
+              <h3
+                className={`text-xl font-bold ${
+                  tier.featured ? "text-white" : "text-navy"
+                }`}
+              >
+                {tier.name}
+              </h3>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span
+                  className={`text-4xl font-bold ${
+                    tier.featured ? "text-gold-light" : "text-navy"
+                  }`}
+                >
+                  {tier.price}
+                </span>
+                <span
+                  className={`text-sm ${
+                    tier.featured ? "text-white/60" : "text-navy/50"
+                  }`}
+                >
+                  {tier.cadence}
+                </span>
+              </div>
+              <p
+                className={`mt-3 text-sm leading-relaxed ${
+                  tier.featured ? "text-white/80" : "text-navy/70"
+                }`}
+              >
+                {tier.tagline}
+              </p>
+              <p
+                className={`mt-2 text-xs italic ${
+                  tier.featured ? "text-gold-light" : "text-gold"
+                }`}
+              >
+                Best for: {tier.bestFor}
+              </p>
+              <ul
+                className={`mt-6 space-y-3 ${
+                  tier.featured ? "text-white/80" : "text-navy/70"
+                }`}
+              >
+                {tier.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2 text-sm"
+                  >
+                    <svg
+                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                        tier.featured ? "text-gold-light" : "text-gold"
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              {/* TODO (Tony): replace each href with the matching paid Calendly
+                  event-type URL. Configure in Calendly admin → Event Type →
+                  Payments → enable Stripe with the tier's price. Per Trisha
+                  2026-04-20: "no one talks to me unless they make a payment." */}
+              <a
+                href={tier.href}
+                className={`mt-auto pt-8 inline-flex items-center justify-center w-full font-semibold transition-all ${
+                  tier.featured
+                    ? "text-white"
+                    : "text-white"
+                }`}
+              >
+                <span
+                  className={`w-full px-6 py-3 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all ${
+                    tier.featured
+                      ? "bg-gold hover:bg-gold-light"
+                      : "bg-navy hover:bg-navy-light"
+                  }`}
+                >
+                  {tier.cta}
+                </span>
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-12 text-center text-sm text-navy/40 max-w-2xl mx-auto leading-relaxed">
+          Pricing and packages above are starting proposals — Trisha will
+          confirm final pricing before live launch. Each &ldquo;Book&rdquo; link
+          will be wired to a paid Calendly event with payment required at
+          checkout.
+        </p>
+      </div>
+    </section>
+  );
+}
 
 function HowItWorksSection() {
   return (
@@ -667,6 +858,7 @@ export default function Home() {
       <ProblemSection />
       <ServicesSection />
       <HowItWorksSection />
+      <PricingSection />
       <TestimonialsSection />
       <AboutSection />
       <FAQSection />
