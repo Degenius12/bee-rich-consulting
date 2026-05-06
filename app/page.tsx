@@ -3,17 +3,22 @@ import Image from "next/image";
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-32 sm:h-44 lg:h-56">
-        <div className="flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20 lg:h-24">
+        <div className="flex items-center gap-3 sm:gap-4">
           <Image
             src="/images/logo-optimized.png"
-            alt="Bee-Rich Consulting — Bee-Rich in Knowledge, Health, Freedom & Fortune"
+            alt="Bee-Rich Consulting"
             width={3000}
             height={2000}
-            className="h-28 sm:h-40 lg:h-52 w-auto"
+            className="h-12 sm:h-14 lg:h-16 w-auto"
             priority
             unoptimized
           />
+          <span className="hidden sm:block text-[11px] lg:text-xs font-semibold uppercase tracking-wider text-navy/70 leading-tight">
+            Bee-Rich in Knowledge,
+            <br />
+            Health, Freedom &amp; Fortune
+          </span>
         </div>
         <a
           href="#book"
@@ -28,7 +33,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="relative pt-40 sm:pt-56 lg:pt-72 pb-20 sm:pb-28 overflow-hidden">
+    <section className="relative pt-28 sm:pt-32 lg:pt-40 pb-20 sm:pb-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-2 border-gold/20 opacity-40" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-gold/10 opacity-30" />
@@ -797,14 +802,19 @@ function Footer() {
     <footer className="bg-navy py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image
-            src="/images/logo-optimized.png"
-            alt="Bee-Rich Consulting"
-            width={3000}
-            height={2000}
-            className="h-20 w-auto brightness-200"
-            unoptimized
-          />
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <Image
+              src="/images/logo-optimized.png"
+              alt="Bee-Rich Consulting"
+              width={3000}
+              height={2000}
+              className="h-16 w-auto brightness-200"
+              unoptimized
+            />
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-white/60">
+              Bee-Rich in Knowledge, Health, Freedom &amp; Fortune
+            </span>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-white/50 text-sm">
             <a
