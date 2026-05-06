@@ -6,13 +6,12 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20 lg:h-24">
         <div className="flex items-center gap-3 sm:gap-4">
           <Image
-            src="/images/logo-optimized.png"
+            src="/images/logo-mark.png"
             alt="Bee-Rich Consulting"
-            width={3000}
-            height={2000}
+            width={1200}
+            height={489}
             className="h-12 sm:h-14 lg:h-16 w-auto"
             priority
-            unoptimized
           />
           <span className="hidden sm:block text-[11px] lg:text-xs font-semibold uppercase tracking-wider text-navy/70 leading-tight">
             Bee-Rich in Knowledge,
@@ -804,12 +803,11 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <Image
-              src="/images/logo-optimized.png"
+              src="/images/logo-mark.png"
               alt="Bee-Rich Consulting"
-              width={3000}
-              height={2000}
+              width={1200}
+              height={489}
               className="h-16 w-auto brightness-200"
-              unoptimized
             />
             <span className="text-[11px] font-semibold uppercase tracking-wider text-white/60">
               Bee-Rich in Knowledge, Health, Freedom &amp; Fortune
