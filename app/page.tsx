@@ -285,7 +285,7 @@ const steps = [
 const pricingTiers = [
   {
     name: "Business Strategy Session",
-    price: "$297",
+    price: "$385",
     cadence: "one-time",
     tagline:
       "Get unstuck on a specific decision — licensing, pricing, hiring, or a hard conversation.",
@@ -297,12 +297,12 @@ const pricingTiers = [
       "One follow-up Q&A email within 30 days",
     ],
     cta: "Book Strategy Session",
-    href: "#book-strategy",
+    href: "https://calendly.com/bee-richconsulting-info/tier-business-strategy-session",
     featured: false,
   },
   {
     name: "Launch Roadmap",
-    price: "$1,497",
+    price: "$1,740",
     cadence: "4-week engagement",
     tagline:
       "Custom plan to open or relaunch your early-education business — operations, finance, and licensing handled.",
@@ -315,25 +315,25 @@ const pricingTiers = [
       "Recorded sessions for replay",
     ],
     cta: "Book Launch Roadmap",
-    href: "#book-roadmap",
+    href: "https://calendly.com/bee-richconsulting-info/tier-launch-roadmap",
     featured: true,
   },
   {
     name: "Growth Partnership",
     price: "$4,997",
-    cadence: "8-12 week engagement",
+    cadence: "10-week engagement",
     tagline:
       "Strategic partner for scaling beyond one location — operations, hiring, finance, expansion.",
     bestFor: "Established owners ready to expand",
     features: [
-      "8 sessions over 8-12 weeks",
+      "8 sessions over 10 weeks",
       "Full strategic engagement: ops, hiring, finance, expansion",
       "Monthly review + plan adjustment",
       "Direct email access throughout the engagement",
       "Two quarterly check-ins after engagement ends",
     ],
     cta: "Book Growth Partnership",
-    href: "#book-growth",
+    href: "https://calendly.com/bee-richconsulting-info/tier-growth-partnership",
     featured: false,
   },
 ];
@@ -436,12 +436,10 @@ function PricingSection() {
                   </li>
                 ))}
               </ul>
-              {/* TODO (Tony): replace each href with the matching paid Calendly
-                  event-type URL. Configure in Calendly admin → Event Type →
-                  Payments → enable Stripe with the tier's price. Per Trisha
-                  2026-04-20: "no one talks to me unless they make a payment." */}
               <a
                 href={tier.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`mt-auto pt-8 inline-flex items-center justify-center w-full font-semibold transition-all ${
                   tier.featured
                     ? "text-white"
@@ -462,11 +460,9 @@ function PricingSection() {
           ))}
         </div>
 
-        <p className="mt-12 text-center text-sm text-navy/40 max-w-2xl mx-auto leading-relaxed">
-          Pricing and packages above are starting proposals — Trisha will
-          confirm final pricing before live launch. Each &ldquo;Book&rdquo; link
-          will be wired to a paid Calendly event with payment required at
-          checkout.
+        <p className="mt-12 text-center text-sm text-navy/60 max-w-2xl mx-auto leading-relaxed">
+          Business plans, SOPs, and handbooks are available as add-ons to any
+          tier — ask about pricing on your booked call.
         </p>
       </div>
     </section>
@@ -749,9 +745,6 @@ function CTASection() {
         </p>
 
         <div className="mt-10">
-          {/* TODO (Tony): Replace href below with paid Calendly event-type URL.
-              In Calendly admin → Event Type → Payments → enable Stripe/PayPal.
-              Per Trisha 2026-04-20: "no one talks to me unless they make a payment." */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/15 p-12 max-w-lg mx-auto">
             <div className="text-white/50 mb-6">
               <svg
@@ -775,7 +768,7 @@ function CTASection() {
               Focused, paid, actionable — book a time that works for you
             </p>
             <a
-              href="https://calendly.com"
+              href="https://calendly.com/bee-richconsulting-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full"
