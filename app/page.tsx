@@ -94,7 +94,7 @@ function Hero() {
           </div>
           <div className="text-center">
             <div className="text-2xl sm:text-3xl font-bold text-gold-light">
-              10+
+              20+
             </div>
             <div className="text-xs sm:text-sm mt-1">Years Experience</div>
           </div>
@@ -512,73 +512,71 @@ function HowItWorksSection() {
   );
 }
 
-const testimonials = [
+const commitments = [
   {
-    quote:
-      "Working with Bee-Rich Consulting completely shifted my perspective on what\u2019s possible. I went from feeling overwhelmed to having a clear path forward.",
-    name: "Sarah M.",
-    role: "Small Business Owner",
+    title: "A Customized Roadmap",
+    description:
+      "No generic playbooks. Every plan is built around your stage, your market, and your goals.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
   },
   {
-    quote:
-      "The team didn\u2019t just give me advice \u2014 they gave me a framework for thinking about my life and business in a whole new way. Best investment I\u2019ve made.",
-    name: "James R.",
-    role: "Entrepreneur",
+    title: "An Operator in Your Corner",
+    description:
+      "Guidance from someone who has actually opened, run, and scaled early-education businesses.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
   },
   {
-    quote:
-      "I finally feel like I\u2019m building something meaningful. The holistic approach to wealth, health, and freedom is what sets Bee-Rich apart.",
-    name: "Monica L.",
-    role: "Executive Coach",
+    title: "Momentum You Can Feel",
+    description:
+      "A structured process designed to produce meaningful progress within the first 30 days.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
   },
 ];
 
-function TestimonialsSection() {
+function ExpectationsSection() {
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-gold font-semibold text-sm uppercase tracking-wider">
-            Testimonials
+            Our Promise
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
-            What Our Clients Say
+            What You Can Expect
           </h2>
-          <p className="mt-4 text-lg text-navy/60 italic">
-            Real stories from people who chose to become Bee-Rich.
+          <p className="mt-4 text-lg text-navy/60">
+            Every engagement is built on three commitments we hold ourselves to.
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {commitments.map((item) => (
             <div
-              key={i}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-surface relative"
+              key={item.title}
+              className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-surface hover:border-gold/30 transition-all hover:-translate-y-1"
             >
-              <div className="absolute -top-4 left-8 text-5xl text-gold/20 font-serif leading-none">
-                &ldquo;
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 text-gold flex items-center justify-center group-hover:from-gold group-hover:to-gold-light group-hover:text-white transition-all">
+                {item.icon}
               </div>
-              <p className="text-navy/70 leading-relaxed italic">
-                &ldquo;{t.quote}&rdquo;
+              <h3 className="mt-6 text-xl font-bold text-navy">{item.title}</h3>
+              <p className="mt-3 text-navy/60 leading-relaxed text-sm">
+                {item.description}
               </p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue to-blue-light flex items-center justify-center text-white font-bold text-sm">
-                  {t.name[0]}
-                </div>
-                <div>
-                  <div className="font-semibold text-navy text-sm">
-                    {t.name}
-                  </div>
-                  <div className="text-navy/50 text-xs">{t.role}</div>
-                </div>
-              </div>
             </div>
           ))}
         </div>
-
-        <p className="mt-8 text-center text-sm text-navy/40">
-          * Placeholder testimonials — replace with real client feedback
-        </p>
       </div>
     </section>
   );
@@ -860,7 +858,7 @@ export default function Home() {
       <ServicesSection />
       <HowItWorksSection />
       <PricingSection />
-      <TestimonialsSection />
+      <ExpectationsSection />
       <AboutSection />
       <FAQSection />
       <CTASection />
