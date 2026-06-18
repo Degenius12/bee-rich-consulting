@@ -288,8 +288,8 @@ const steps = [
 
 const pricingTiers = [
   {
-    name: "Business Strategy Session",
-    price: "$385",
+    name: "Strategy Session",
+    price: "$495",
     cadence: "one-time",
     tagline:
       "Get unstuck on a specific decision — licensing, pricing, hiring, or a hard conversation.",
@@ -305,12 +305,12 @@ const pricingTiers = [
     featured: false,
   },
   {
-    name: "Launch Roadmap",
-    price: "$1,740",
+    name: "Growth Accelerator",
+    price: "$2,997",
     cadence: "4-week engagement",
     tagline:
-      "Custom plan to open or relaunch your early-education business — operations, finance, and licensing handled.",
-    bestFor: "Pre-launch or relaunching founders",
+      "A focused engagement to accelerate enrollment, operations, and profitability — with a clear roadmap to execute.",
+    bestFor: "Owners ready to grow their center",
     features: [
       "4 sessions over 4 weeks",
       "Custom operational and financial roadmap",
@@ -318,17 +318,17 @@ const pricingTiers = [
       "Email support throughout the engagement",
       "Recorded sessions for replay",
     ],
-    cta: "Book Launch Roadmap",
+    cta: "Book Growth Accelerator",
     href: "https://calendly.com/bee-richconsulting-info/tier-launch-roadmap",
     featured: true,
   },
   {
-    name: "Growth Partnership",
-    price: "$4,997",
+    name: "VIP Intensive",
+    price: "$7,500",
     cadence: "10-week engagement",
     tagline:
-      "Strategic partner for scaling beyond one location — operations, hiring, finance, expansion.",
-    bestFor: "Established owners ready to expand",
+      "Our highest-touch partnership for scaling and expansion — operations, hiring, finance, and growth.",
+    bestFor: "Established owners scaling up or expanding",
     features: [
       "8 sessions over 10 weeks",
       "Full strategic engagement: ops, hiring, finance, expansion",
@@ -336,7 +336,7 @@ const pricingTiers = [
       "Direct email access throughout the engagement",
       "Two quarterly check-ins after engagement ends",
     ],
-    cta: "Book Growth Partnership",
+    cta: "Book VIP Intensive",
     href: "https://calendly.com/bee-richconsulting-info/tier-growth-partnership",
     featured: false,
   },
@@ -468,6 +468,71 @@ function PricingSection() {
           Business plans, SOPs, and handbooks are available as add-ons to any
           tier — ask about pricing on your booked call.
         </p>
+      </div>
+    </section>
+  );
+}
+
+const growthMethod = [
+  {
+    step: "Step 1",
+    title: "Build",
+    description:
+      "Licensing, compliance, and setup — get the foundation right from day one.",
+  },
+  {
+    step: "Step 2",
+    title: "Fill",
+    description:
+      "Enrollment and marketing systems that keep your rooms full and waitlists growing.",
+  },
+  {
+    step: "Step 3",
+    title: "Optimize",
+    description:
+      "Staffing, finances, and systems tuned for a profitable, sustainable operation.",
+  },
+  {
+    step: "Step 4",
+    title: "Scale",
+    description:
+      "Expansion and growth — move from one location to a thriving multi-site network.",
+  },
+];
+
+function GrowthMethodSection() {
+  return (
+    <section className="py-20 bg-navy">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="text-gold-light font-semibold text-sm uppercase tracking-wider">
+            Our Methodology
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">
+            The Bee-Rich Growth Method&trade;
+          </h2>
+          <p className="mt-4 text-lg text-white/60">
+            A proven four-stage path — from licensing your first room to scaling
+            a thriving network.
+          </p>
+        </div>
+
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {growthMethod.map((item) => (
+            <div
+              key={item.title}
+              className="group bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-gold/40 transition-all hover:-translate-y-1"
+            >
+              <div className="text-gold-light text-sm font-bold uppercase tracking-wider">
+                {item.step}
+              </div>
+              <h3 className="mt-3 text-xl font-bold text-white">{item.title}</h3>
+              <p className="mt-3 text-white/60 leading-relaxed text-sm">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -615,23 +680,22 @@ function AboutSection() {
 
           <div>
             <span className="text-gold font-semibold text-sm uppercase tracking-wider">
-              About Us
+              Our Story
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
-              Meet Bee-Rich Consulting
+              Why Bee-Rich Exists
             </h2>
             <p className="mt-6 text-navy/70 leading-relaxed">
-              At Bee-Rich Consulting, true richness goes beyond your bank
-              account. Built on over two decades of hands-on experience opening
-              and scaling early-education businesses — through licensing
-              hurdles, enrollment battles, and multi-site expansion — we provide
-              consulting grounded in real-world operational expertise, not
-              theory.
+              After over two decades of building and supporting childcare
+              businesses, our founder watched talented owners struggle with the
+              same hurdles again and again — licensing, staffing, enrollment,
+              and growth.
             </p>
             <p className="mt-4 text-navy/70 leading-relaxed">
-              We don&apos;t believe in one-size-fits-all solutions. Every client
-              gets a customized roadmap drawn from real lessons learned in the
-              trenches of childcare ownership and business growth.
+              Bee-Rich was created to give childcare founders the roadmap,
+              systems, and support they need to build sustainable, profitable
+              centers — guidance from someone who has walked the same road and
+              solved the same problems.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
@@ -663,7 +727,7 @@ const faqs = [
   {
     question: "How much does a consultation cost?",
     answer:
-      "Strategy sessions are paid engagements. Pricing depends on the scope of work \u2014 after you book, we\u2019ll align on goals and confirm investment before any deeper work begins.",
+      "Our engagements are fixed-price: the Strategy Session is $495, the Growth Accelerator is $2,997, and the VIP Intensive is $7,500. Every package is paid up front with a clear scope \u2014 see the pricing section above and book the one that fits, no sales call required. Add-ons like business plans, SOPs, and handbooks are quoted separately.",
   },
   {
     question: "What makes Bee-Rich different from other consultants?",
@@ -856,6 +920,7 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <ServicesSection />
+      <GrowthMethodSection />
       <HowItWorksSection />
       <PricingSection />
       <ExpectationsSection />
