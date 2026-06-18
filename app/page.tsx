@@ -727,7 +727,7 @@ const faqs = [
   {
     question: "How much does a consultation cost?",
     answer:
-      "Strategy sessions are paid engagements. Pricing depends on the scope of work \u2014 after you book, we\u2019ll align on goals and confirm investment before any deeper work begins.",
+      "Our engagements are fixed-price: the Strategy Session is $495, the Growth Accelerator is $2,997, and the VIP Intensive is $7,500. Every package is paid up front with a clear scope \u2014 see the pricing section above and book the one that fits, no sales call required. Add-ons like business plans, SOPs, and handbooks are quoted separately.",
   },
   {
     question: "What makes Bee-Rich different from other consultants?",
