@@ -473,6 +473,56 @@ function PricingSection() {
   );
 }
 
+const discoveryPoints = [
+  "Getting to know your center — your programs, your families, your team",
+  "The biggest challenges you’re facing right now",
+  "Your goals for the next 3–6 months",
+  "How Bee-Rich can help — and whether we’re the right fit",
+];
+
+function DiscoverySection() {
+  return (
+    <section className="py-20 bg-background">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl border border-surface shadow-sm p-8 sm:p-12">
+          <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            New Clients
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
+            30-Minute New Client Discovery Consultation
+          </h2>
+          <p className="mt-4 text-lg text-navy/70 leading-relaxed">
+            In this call, you’ll sit down with an Advisory Manager who works
+            exclusively with childcare businesses. Here’s what we’ll cover:
+          </p>
+          <ul className="mt-6 space-y-3">
+            {discoveryPoints.map((point, i) => (
+              <li key={i} className="flex items-start gap-3 text-navy/80">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/10 text-gold text-sm font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="leading-relaxed">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-navy font-medium">
+            No sales pitch. No spreadsheets. Just a real conversation about your
+            business.
+          </p>
+          <a
+            href="https://calendly.com/bee-richconsulting-info/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          >
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const growthMethod = [
   {
     step: "Step 1",
@@ -858,6 +908,33 @@ function CTASection() {
   );
 }
 
+function ReferralSection() {
+  return (
+    <section className="py-20 bg-surface">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+          Refer a Friend
+        </span>
+        <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
+          Know a childcare owner who could use a consultant who actually
+          understands their business?
+        </h2>
+        <p className="mt-4 text-lg text-navy/70 leading-relaxed">
+          Send them our way. We specialize in early-childhood-education
+          businesses. For every successful referral, we send you a{" "}
+          <span className="font-semibold text-navy">$250 bonus</span>.
+        </p>
+        <a
+          href="mailto:info@bee-richconsulting.com?subject=Referral"
+          className="mt-8 inline-flex items-center justify-center bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        >
+          Refer a Friend
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-navy py-12">
@@ -923,10 +1000,12 @@ export default function Home() {
       <GrowthMethodSection />
       <HowItWorksSection />
       <PricingSection />
+      <DiscoverySection />
       <ExpectationsSection />
       <AboutSection />
       <FAQSection />
       <CTASection />
+      <ReferralSection />
       <Footer />
     </main>
   );
