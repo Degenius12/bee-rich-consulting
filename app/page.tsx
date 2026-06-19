@@ -485,9 +485,14 @@ function DiscoverySection() {
     <section className="py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl border border-surface shadow-sm p-8 sm:p-12">
-          <span className="text-gold font-semibold text-sm uppercase tracking-wider">
-            New Clients
-          </span>
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+              New Clients
+            </span>
+            <span className="inline-flex items-center bg-gold/10 text-gold text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Free
+            </span>
+          </div>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-navy">
             30-Minute New Client Discovery Consultation
           </h2>
@@ -517,6 +522,10 @@ function DiscoverySection() {
           >
             Book a Consultation
           </a>
+          <p className="mt-3 text-sm text-navy/50">
+            Free, with no obligation — a no-cost first step before any paid
+            engagement.
+          </p>
         </div>
       </div>
     </section>
